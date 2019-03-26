@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Checkers.Settings"
+             Title = "Settings"
+             BackgroundColor="SteelBlue">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BackgroundColor" Value="LightGray" />
+                <Setter Property="FontSize" Value="Large" />
+                <Setter Property="BorderRadius" Value="100"/>
+                <Setter Property="BorderColor" Value="Black"/>
+                <Setter Property="HorizontalOptions" Value="End"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="WidthRequest" Value="50"/>
+                <Setter Property="HeightRequest" Value="30"/>
+            </Style>
+            <Style x:Key="textStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid HorizontalOptions="Center" 
+                  VerticalOptions="Start" 
+                  RowSpacing="0"
+                  ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.13*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.25*"/>
+                    <ColumnDefinition Width="0.13*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="1"
+                       Grid.Row="0"
+                       Grid.ColumnSpan="2"
+                       Text="Enter your nickname"
+                       FontSize="18"
+                       VerticalOptions="End"
+                       HorizontalOptions="Center"
+                       Style="{StaticResource textStyle}"/>
+                <Entry Grid.Column="1"
+                       Grid.Row="1"
+                       Grid.ColumnSpan="2"
+                       x:Name="NName"
+                       WidthRequest="100"
+                       VerticalOptions="Start"
+                       HorizontalOptions="Center"/>
+
+                <Label Grid.Column="1"
+                       Grid.Row="2"
+                       Grid.ColumnSpan="2"
+                       Text="Choose a checker style"
+                       FontSize="17"
+                       VerticalOptions="End"
+                       HorizontalOptions="Center"
+                       Style="{StaticResource textStyle}"/>
+                <BoxView Grid.Column="1"
+                         Grid.Row="3"
+                         x:Name="FirstChecker"
+                         BackgroundColor="Green"
+                         CornerRadius="100"
+                         HorizontalOptions="End"
+                         VerticalOptions="Center"/>
+                <BoxView Grid.Column="2"
+                         Grid.Row="3"
+                         x:Name="SecondChecker"
+                         BackgroundColor="Red"
+                         CornerRadius="100"
+                         HorizontalOptions="Start"
+                         VerticalOptions="Center"/>
+                <Button Grid.Column="0"
+                        Grid.Row="3" 
+                        x:Name="ChooseCheckerLeftButt"
+                        Clicked="ChooseCheckerLeftButt_Clicked"
+                        Style="{StaticResource buttonStyle}"/>
+                <Button Grid.Column="3"
+                        Grid.Row="3" 
+                        x:Name="ChooseCheckerRightButt"
+                        Clicked="ChooseCheckerRightButt_Clicked"
+                        Style="{StaticResource buttonStyle}"/>
+
+                <Label Grid.Column="1"
+                       Grid.Row="4"
+                       Grid.ColumnSpan="2"
+                       Text="Choose a board style"
+                       FontSize="17"
+                       VerticalOptions="End"
+                       HorizontalOptions="Center"
+                       Style="{StaticResource textStyle}"/>
+                
+                <BoxView Grid.Column="1"
+                         Grid.Row="5"
+                         x:Name="BoardFirst"
+                         BackgroundColor="WhiteSmoke"
+                         HorizontalOptions="End"
+                         VerticalOptions="End"/>
+                <BoxView Grid.Column="2"
+                         Grid.Row="5"
+                         x:Name="BoardSecond"
+                         BackgroundColor="Black"
+                         HorizontalOptions="Start"
+                         VerticalOptions="End"/>
+                <BoxView Grid.Column="1"
+                         Grid.Row="6"
+                         x:Name="BoardFirst2"
+                         BackgroundColor="Black"
+                         HorizontalOptions="End"
+                         VerticalOptions="Start"/>
+                <BoxView Grid.Column="2"
+                         Grid.Row="6"
+                         x:Name="BoardSecond2"
+                         BackgroundColor="WhiteSmoke"
+                         HorizontalOptions="Start"
+                         VerticalOptions="Start"/>
+                <Button Grid.Column="0"
+                        Grid.Row="5" 
+                        Grid.RowSpan="2"
+                        x:Name="ChooseBoardLeftButt"
+                        Clicked="ChooseBoardLeftButt_Clicked"
+                        Style="{StaticResource buttonStyle}"/>
+                <Button Grid.Column="3"
+                        Grid.Row="5" 
+                        Grid.RowSpan="2"
+                        x:Name="ChooseBoardRightButt"
+                        Clicked="ChooseBoardRightButt_Clicked"
+                        Style="{StaticResource buttonStyle}"/>
+
+                <Label Grid.Column="1"
+                       Grid.Row="7"
+                       Grid.ColumnSpan="2"
+                       Text="Choose your country"
+                       FontSize="17"
+                       VerticalOptions="End"
+                       HorizontalOptions="Center"
+                       Style="{StaticResource textStyle}"/>
+
+                <Image x:Name="image" 
+                       Grid.Column="1"
+                       Grid.Row="8"/>
+                        
+                <Picker x:Name="picker" 
+                        SelectedIndexChanged="Picker_SelectedIndexChanged"
+                        Grid.Column="2"
+                        Grid.Row="8"
+                        WidthRequest="100"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Center">
+                    <Picker.Items>
+                        <x:String>Belarus</x:String>
+                        <x:String>Ukraine</x:String>
+                        <x:String>Poland</x:String>
+                        <x:String>Moldova</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Switch Grid.Column="1"
+                        Grid.Row="9"
+                        x:Name="switch"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center" 
+                        IsToggled="true"/>
+                <Label Grid.Column="2"
+                       Grid.Row="9"
+                       Grid.ColumnSpan="2"
+                       Text="Music and sounds"
+                       FontSize="17"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"
+                       Style="{StaticResource textStyle}"/>
+
+                <Button Grid.Column="0"
+                        Grid.Row="10"
+                        Grid.ColumnSpan="2"
+                        x:Name="SubmitBtm"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start"
+                        Text="Submit"
+                        Clicked="SubmitBtm_Clicked"
+                        TextColor="Black"
+                        BackgroundColor="LightGray"
+                        />
+                <Button Grid.Column="2"
+                        Grid.Row="10"
+                        Grid.ColumnSpan="2"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        Text="Cancel"
+                        Clicked="BackButton_Click"
+                        TextColor="Black"
+                        BackgroundColor="LightGray"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
