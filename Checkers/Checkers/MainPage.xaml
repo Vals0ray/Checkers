@@ -3,13 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Checkers"
              x:Class="Checkers.MainPage"
-             Title="Checkers">
+             Title="Checkers"
+             BackgroundColor="Brown"
+             BackgroundImage="Background.jpg">
 
     <StackLayout>
         <Label Text="Main Menu" FontSize="24" HorizontalTextAlignment="Center"/>
-        <Button x:Name="Game" Text="Single game" Clicked="Game_Clicked"/>
-        <Button Text="Multiplayer" />
-        <Button Text="Leaderboard" />
+        <Button Text="Single game" />
+        <Button x:Name="Game" Text="Multiplayer" Clicked="Game_Clicked"/>
+        <Button x:Name="Download" Text="Download" Clicked="Download_Clicked"/>
+        <Button x:Name="Leaderboard"  Text="Leaderboard" Clicked="Leaderboard_Clicked"/>
         <Button x:Name="Settings" Text="Settings" Clicked="Settings_Clicked"/>
         <Button x:Name="Exit" Text="Exit" Clicked="Exit_Clicked"/>
     </StackLayout>

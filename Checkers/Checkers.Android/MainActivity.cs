@@ -17,6 +17,8 @@ namespace Checkers.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+            Window.SetStatusBarColor(Android.Graphics.Color.Rgb(28, 13, 3));
+
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());

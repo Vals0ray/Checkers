@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Checkers"
+             x:Class="Checkers.Download"
+             Title="Checkers"
+             BackgroundColor="Brown"
+             BackgroundImage="Background.jpg">
+
+    <StackLayout Padding="10" Spacing="15">
+        <ListView x:Name="friendsList" ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label Text="{Binding Name}" FontSize="Medium" TextColor="White" HorizontalOptions="Start"/>
+                                <Label Text="{Binding Date}" FontSize="Medium" TextColor="White" HorizontalOptions="End"/>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center">
+            <Button x:Name="Load" Text="Load" FontSize="24" TextColor="White" Clicked="Load_Clicked"/>
+            <Button x:Name="Delete" Text="Delete" FontSize="24" TextColor="White" Clicked="Delete_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

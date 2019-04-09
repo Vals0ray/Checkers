@@ -8,7 +8,6 @@ namespace Checkers
         public MainPage()
         {
             InitializeComponent();
-
         }
 
         private async void Game_Clicked(object sender, System.EventArgs e)
@@ -23,7 +22,17 @@ namespace Checkers
 
         private void Exit_Clicked(object sender, System.EventArgs e)
         {
+            
+        }
 
+        private async void Leaderboard_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Leaderboard());
+        }
+
+        private async void Download_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new Download());
         }
     }
 }

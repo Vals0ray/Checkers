@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -22,12 +23,6 @@ namespace Checkers
 		{
 			InitializeComponent ();
 
-            ChooseCheckerLeftButt.Text = "<==";
-            ChooseCheckerRightButt.Text = "==>";
-
-            ChooseBoardLeftButt.Text = "<==";
-            ChooseBoardRightButt.Text = "==>";
-
             image.Source = ImageSource.FromResource("Checkers.img.NoneFlag.jpg");
         }
 
@@ -42,8 +37,10 @@ namespace Checkers
 
             for (int i = 0; i >= -50; i -= 3)
             {
-                await FirstChecker.TranslateTo(i, 0, timeout);
-                await SecondChecker.TranslateTo(i, 0, timeout);
+                Task t1 = Task.Run(() => FirstChecker.TranslateTo(i, 0, timeout));
+                Task t2 = Task.Run(() => SecondChecker.TranslateTo(i, 0, timeout));
+
+                await Task.WhenAll(new[] { t1, t2 });
             }
 
             FirstChecker.TranslationX = 50;
@@ -66,9 +63,11 @@ namespace Checkers
             }
 
             for (int i = 50; i >= 0; i -= 3)
-                {
-                await FirstChecker.TranslateTo(i, 0, timeout);
-                await SecondChecker.TranslateTo(i, 0, timeout);
+            {
+                Task t1 = Task.Run(() => FirstChecker.TranslateTo(i, 0, timeout));
+                Task t2 = Task.Run(() => SecondChecker.TranslateTo(i, 0, timeout));
+
+                await Task.WhenAll(new[] { t1, t2 });
             }
         }
 
@@ -78,8 +77,10 @@ namespace Checkers
 
             for (int i = 0; i <= 50; i += 3)
             {
-                await FirstChecker.TranslateTo(i, 0, timeout);
-                await SecondChecker.TranslateTo(i, 0, timeout);
+                Task t1 = Task.Run(() => FirstChecker.TranslateTo(i, 0, timeout));
+                Task t2 = Task.Run(() => SecondChecker.TranslateTo(i, 0, timeout));
+
+                await Task.WhenAll(new[] { t1, t2 });
             }
 
             FirstChecker.TranslationX = -50;
@@ -103,8 +104,10 @@ namespace Checkers
 
             for (int i = -50; i <= 0; i += 3)
             {
-                await FirstChecker.TranslateTo(i, 0, timeout);
-                await SecondChecker.TranslateTo(i, 0, timeout);
+                Task t1 = Task.Run(() => FirstChecker.TranslateTo(i, 0, timeout));
+                Task t2 = Task.Run(() => SecondChecker.TranslateTo(i, 0, timeout));
+
+                await Task.WhenAll(new[] { t1, t2 });
             }
         }
 
@@ -114,10 +117,12 @@ namespace Checkers
 
             for (int i = 0; i >= -25; i -= 3)
             {
-                await BoardFirst.TranslateTo(i, 0, timeout);
-                await BoardSecond.TranslateTo(i, 0, timeout);
-                await BoardFirst2.TranslateTo(i, 0, timeout);
-                await BoardSecond2.TranslateTo(i, 0, timeout);
+                Task t1 = Task.Run(() => BoardFirst.TranslateTo(i, 0, timeout));
+                Task t2 = Task.Run(() => BoardSecond.TranslateTo(i, 0, timeout));
+                Task t3 = Task.Run(() => BoardFirst2.TranslateTo(i, 0, timeout));
+                Task t4 = Task.Run(() => BoardSecond2.TranslateTo(i, 0, timeout));
+
+                await Task.WhenAll(new[] { t1, t2, t3, t4 });
             }
             BoardFirst.TranslationX = 25;
             BoardSecond.TranslationX = 25;
@@ -141,10 +146,12 @@ namespace Checkers
 
             for (int i = 25; i >= 0; i -= 3)
             {
-                await BoardFirst.TranslateTo(i, 0, timeout);
-                await BoardSecond.TranslateTo(i, 0, timeout);
-                await BoardFirst2.TranslateTo(i, 0, timeout);
-                await BoardSecond2.TranslateTo(i, 0, timeout);
+                Task t1 = Task.Run(() => BoardFirst.TranslateTo(i, 0, timeout));
+                Task t2 = Task.Run(() => BoardSecond.TranslateTo(i, 0, timeout));
+                Task t3 = Task.Run(() => BoardFirst2.TranslateTo(i, 0, timeout));
+                Task t4 = Task.Run(() => BoardSecond2.TranslateTo(i, 0, timeout));
+
+                await Task.WhenAll(new[] { t1, t2, t3, t4 });
             }
         }
 
@@ -154,10 +161,12 @@ namespace Checkers
 
             for (int i = 0; i <= 25; i += 3)
             {
-                await BoardFirst.TranslateTo(i, 0, timeout);
-                await BoardSecond.TranslateTo(i, 0, timeout);
-                await BoardFirst2.TranslateTo(i, 0, timeout);
-                await BoardSecond2.TranslateTo(i, 0, timeout);
+                Task t1 = Task.Run(() => BoardFirst.TranslateTo(i, 0, timeout));
+                Task t2 = Task.Run(() => BoardSecond.TranslateTo(i, 0, timeout));
+                Task t3 = Task.Run(() => BoardFirst2.TranslateTo(i, 0, timeout));
+                Task t4 = Task.Run(() => BoardSecond2.TranslateTo(i, 0, timeout));
+
+                await Task.WhenAll(new[] { t1, t2, t3, t4 });
             }
 
             BoardFirst.TranslationX = -25;
@@ -182,10 +191,12 @@ namespace Checkers
 
             for (int i = -25; i <= 0; i += 3)
             {
-                await BoardFirst.TranslateTo(i, 0, timeout);
-                await BoardSecond.TranslateTo(i, 0, timeout);
-                await BoardFirst2.TranslateTo(i, 0, timeout);
-                await BoardSecond2.TranslateTo(i, 0, timeout);
+                Task t1 = Task.Run(() => BoardFirst.TranslateTo(i, 0, timeout));
+                Task t2 = Task.Run(() => BoardSecond.TranslateTo(i, 0, timeout));
+                Task t3 = Task.Run(() => BoardFirst2.TranslateTo(i, 0, timeout));
+                Task t4 = Task.Run(() => BoardSecond2.TranslateTo(i, 0, timeout));
+
+                await Task.WhenAll(new[] { t1, t2, t3, t4 });
             }
         }
 
