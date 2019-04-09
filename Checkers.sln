@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkers.Android", "Checkers\Checkers.Android\Checkers.Android.csproj", "{838FB14B-7A2B-4476-9127-3ADADFB4D914}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkers", "Checkers\Checkers\Checkers.csproj", "{EFF706D8-A2BC-45CC-B390-C8CE6BCB5D8E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{838FB14B-7A2B-4476-9127-3ADADFB4D914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{838FB14B-7A2B-4476-9127-3ADADFB4D914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{838FB14B-7A2B-4476-9127-3ADADFB4D914}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{838FB14B-7A2B-4476-9127-3ADADFB4D914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{838FB14B-7A2B-4476-9127-3ADADFB4D914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{838FB14B-7A2B-4476-9127-3ADADFB4D914}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EFF706D8-A2BC-45CC-B390-C8CE6BCB5D8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF706D8-A2BC-45CC-B390-C8CE6BCB5D8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF706D8-A2BC-45CC-B390-C8CE6BCB5D8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF706D8-A2BC-45CC-B390-C8CE6BCB5D8E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {625FAE71-64B6-49F9-B2D1-1D9D337E0C19}
+	EndGlobalSection
+EndGlobal
