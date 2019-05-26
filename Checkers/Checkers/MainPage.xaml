@@ -7,14 +7,8 @@
              BackgroundColor="Brown"
              BackgroundImage="Background.jpg">
 
-    <StackLayout>
-        <Label Text="Main Menu" FontSize="24" HorizontalTextAlignment="Center"/>
-        <Button Text="Single game" />
-        <Button x:Name="Game" Text="Multiplayer" Clicked="Game_Clicked"/>
-        <Button x:Name="Download" Text="Download" Clicked="Download_Clicked"/>
-        <Button x:Name="Leaderboard"  Text="Leaderboard" Clicked="Leaderboard_Clicked"/>
-        <Button x:Name="Settings" Text="Settings" Clicked="Settings_Clicked"/>
-        <Button x:Name="Exit" Text="Exit" Clicked="Exit_Clicked"/>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Frame x:Name="Game"/>
     </StackLayout>
 
 </ContentPage>

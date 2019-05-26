@@ -2348,8 +2348,11 @@ namespace Checkers.Droid
 			// aapt resource value: 0x7F010002
 			public const int Background = 2130771970;
 			
+			// aapt resource value: 0x7F010004
+			public const int Crown = 2130771972;
+			
 			// aapt resource value: 0x7F010003
-			public const int Crown = 2130771971;
+			public const int Crown – копія = 2130771971;
 			
 			// aapt resource value: 0x7F090056
 			public const int design_bottom_navigation_item_background = 2131296342;
@@ -2368,6 +2371,15 @@ namespace Checkers.Droid
 			
 			// aapt resource value: 0x7F09005B
 			public const int design_snackbar_background = 2131296347;
+			
+			// aapt resource value: 0x7F010005
+			public const int download = 2130771973;
+			
+			// aapt resource value: 0x7F010006
+			public const int icon = 2130771974;
+			
+			// aapt resource value: 0x7F010007
+			public const int icons = 2130771975;
 			
 			// aapt resource value: 0x7F090054
 			public const int ic_audiotrack_dark = 2131296340;
@@ -2999,8 +3011,17 @@ namespace Checkers.Droid
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
 			
-			// aapt resource value: 0x7F010004
-			public const int Save = 2130771972;
+			// aapt resource value: 0x7F010008
+			public const int Restart = 2130771976;
+			
+			// aapt resource value: 0x7F010009
+			public const int Restart2 = 2130771977;
+			
+			// aapt resource value: 0x7F010011
+			public const int Save = 2130771985;
+			
+			// aapt resource value: 0x7F010010
+			public const int save-button = 2130771984;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
@@ -4073,6 +4094,9 @@ namespace Checkers.Droid
 			
 			// aapt resource value: 0x7F060004
 			public const int AppCompatDialogStyle = 2131099652;
+			
+			// aapt resource value: 0x7F060005
+			public const int AppToolbarTheme = 2131099653;
 			
 			// aapt resource value: 0x7F160007
 			public const int Base_AlertDialog_AppCompat = 2132148231;

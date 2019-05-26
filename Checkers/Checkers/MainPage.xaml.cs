@@ -8,31 +8,23 @@ namespace Checkers
         public MainPage()
         {
             InitializeComponent();
+
+            Subscribe();
+
+            StartNewGame();
         }
 
-        private async void Game_Clicked(object sender, System.EventArgs e)
+        private void Subscribe()
+        {
+            MessagingCenter.Subscribe<Page>(
+                this,
+                "Restart_Game", 
+                async (sender) =>  { await Navigation.PushAsync(new Game()); }); 
+        }
+
+        private async void StartNewGame()
         {
             await Navigation.PushAsync(new Game());
-        }
-
-        private async void Settings_Clicked(object sender, System.EventArgs e)
-        {
-            await Navigation.PushAsync(new Settings());
-        }
-
-        private void Exit_Clicked(object sender, System.EventArgs e)
-        {
-            
-        }
-
-        private async void Leaderboard_Clicked(object sender, System.EventArgs e)
-        {
-            await Navigation.PushAsync(new Leaderboard());
-        }
-
-        private async void Download_Clicked(object sender, System.EventArgs e)
-        {
-            await Navigation.PushAsync(new Download());
         }
     }
 }

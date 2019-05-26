@@ -8,6 +8,8 @@ namespace Checkers
 
         public DbSet<DBModel> DBModels { get; set; }
 
+        public DbSet<Models.TextModel> TextModels { get; set; }
+
         public ApplicationContext(string databasePath)
         {
             _databasePath = databasePath;

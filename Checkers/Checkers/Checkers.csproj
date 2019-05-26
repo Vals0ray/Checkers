@@ -44,9 +44,6 @@
     <Compile Update="Download.xaml.cs">
       <DependentUpon>Download.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Leaderboard.xaml.cs">
-      <DependentUpon>Leaderboard.xaml</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +51,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Settings.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\AboutAndRules.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

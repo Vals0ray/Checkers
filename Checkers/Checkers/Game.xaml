@@ -4,9 +4,22 @@
              x:Class="Checkers.Game"
              BackgroundColor="Brown"
              BackgroundImage="Background.jpg">
-    <ContentPage.Content>
-        <Grid>
-        </Grid>
-    </ContentPage.Content>
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+            <BoxView BackgroundColor="Green"
+                     HeightRequest="20"
+                     WidthRequest="20"
+                     CornerRadius="100"
+                     Margin="0"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="Start"
+                     x:Name="TitleBoxView"/>
+            <Label x:Name="Title"
+                   HorizontalOptions="StartAndExpand"
+                   FontSize="18"
+                   TextColor="White"
+                   VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
 </ContentPage>
     

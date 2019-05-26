@@ -10,17 +10,24 @@ namespace Checkers
         public Download()
         {
             InitializeComponent();
+
             friendsList.ItemsSource = db.DBModels.ToList();
         }
+
         private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             selectedItem = (DBModel)e.SelectedItem;          
         }
+
         private async void Load_Clicked(object sender, System.EventArgs e)
         {
             if(selectedItem != null)
             {
-                await Navigation.PushAsync(new Game(selectedItem.Board, selectedItem.WhoMove));
+                App.newGame = new Game(selectedItem.Board, selectedItem.WhoMove);
+                await Navigation.PushAsync(App.newGame);
+                Navigation.RemovePage(Navigation.NavigationStack[0]);
+                Navigation.RemovePage(this);
+                App.CreateNavigationPage();
             }
         }
         private void Delete_Clicked(object sender, System.EventArgs e)
