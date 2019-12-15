@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="img\BelarusFlag.jpg" />
+    <None Remove="img\Crown.jpg" />
+    <None Remove="img\GreenCrown.png" />
+    <None Remove="img\GreenQueen.png" />
+    <None Remove="img\MoldovaFlag.jpg" />
+    <None Remove="img\NoneFlag.jpg" />
+    <None Remove="img\PolandFlag.jpg" />
+    <None Remove="img\RedQueen.png" />
+    <None Remove="img\UkraineFlag.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="img\BelarusFlag.jpg" />
+    <EmbeddedResource Include="img\Crown.jpg" />
+    <EmbeddedResource Include="img\GreenQueen.png" />
+    <EmbeddedResource Include="img\NoneFlag.jpg" />
+    <EmbeddedResource Include="img\PolandFlag.jpg" />
+    <EmbeddedResource Include="img\RedQueen.png" />
+    <EmbeddedResource Include="img\UkraineFlag.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.3" />
+    <PackageReference Include="Xamarin.Forms" Version="3.4.0.1008975" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="img\MoldovaFlag.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="ViewModels\Download.xaml.cs">
+      <DependentUpon>Download.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="ViewModels\Game.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ViewModels\AboutAndRules.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

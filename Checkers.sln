@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkers.Android", "Checkers\Checkers.Android\Checkers.Android.csproj", "{838FB14B-7A2B-4476-9127-3ADADFB4D914}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkers.Android", "Checkers.Android\Checkers.Android.csproj", "{838FB14B-7A2B-4476-9127-3ADADFB4D914}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkers", "Checkers\Checkers\Checkers.csproj", "{EFF706D8-A2BC-45CC-B390-C8CE6BCB5D8E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkers", "Checkers\Checkers.csproj", "{EFF706D8-A2BC-45CC-B390-C8CE6BCB5D8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
